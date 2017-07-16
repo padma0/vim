@@ -1,6 +1,7 @@
 " ==================== Defaults ==============================
-let mapleader=" "
-nnoremap <Space> <nop>
+" let mapleader=" "
+" nnoremap <Space> <nop>
+let mapleader=","
 
 syntax on
 set hidden
@@ -16,6 +17,8 @@ set nu
 set nofoldenable
 set backupcopy=yes
 set clipboard=unnamed
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
 " ===================== Vim UI ==============================
 set cursorline                  " Highlight current line
@@ -28,6 +31,9 @@ set number                      " Line numbers on
 set showmatch                   " Show matching brackets/parenthesis
 set incsearch                   " Find as you type search
 set hlsearch                    " Highlight search terms
+set wildmenu                    " Show list instead of just completing
+set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
+set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
 
 " ==================== Swap files ============================
 set backupdir=~/.vim/backup//
@@ -45,3 +51,24 @@ set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 " ==================== Trim whitespaces ======================
 autocmd BufWritePre * %s/\s\+$//e
 
+" ==================== stupid shift key fixes ======================
+command! -bang -nargs=* -complete=file E e<bang> <args>
+command! -bang -nargs=* -complete=file W w<bang> <args>
+command! -bang -nargs=* -complete=file Wq wq<bang> <args>
+command! -bang -nargs=* -complete=file WQ wq<bang> <args>
+command! -bang Wa wa<bang>
+command! -bang WA wa<bang>
+command! -bang Q q<bang>
+command! -bang QA qa<bang>
+command! -bang Qa qa<bang>
+
+" ==================== nerdcommenter ======================
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" ==================== emmet-vim ======================
+let g:user_emmet_settings = {
+\    'javascript.jsx' : {
+\     'extends' : 'jsx',
+\   },
+\}

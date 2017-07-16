@@ -18,6 +18,8 @@ nnoremap <leader>cd :cd %:p:h<CR>
 
 " search for visually selected text
 vnoremap // "ay/<C-R>a<CR>
+" Yank from the cursor to the end of the line
+nnoremap Y y$
 
 " ==================== Buffers ================================
 noremap <S-l> :bn<CR>
@@ -36,17 +38,72 @@ map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " let g:UltiSnipsEditSplit="vertical"
 
-" ==================== Rainbow Parentheses ===================
-noremap <F7> :RainbowParenthesesToggle <CR>
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
 " ==================== crtlp ===================
-nnoremap <leader>p :CtrlP<CR>
-nnoremap <leader>r :CtrlPMRU<CR>
-nnoremap <leader>b :CtrlPBuffer<CR>
+let g:ctrlp_working_path_mode = 'ra'
+
+if executable('rg')
+  set grepprg=rg\ --color=never
+  let s:ctrlp_fallback = 'rg %s --files --color=never --glob ""'
+  let g:ctrlp_use_caching = 0
+elseif executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  let s:ctrlp_fallback = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
+else
+  let s:ctrlp_fallback = 'find %s -type f'
+endif
+
+let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+      \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
+if exists("g:ctrlp_user_command")
+  unlet g:ctrlp_user_command
+endif
+
+let g:ctrlp_user_command = {
+      \ 'types': {
+      \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
+      \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+      \ },
+      \ 'fallback': s:ctrlp_fallback
+      \ }
+
+nnoremap <space>p :CtrlP<CR>
+nnoremap <space>r :CtrlPMRU<CR>
+nnoremap <space>b :CtrlPBuffer<CR>
+
+" ==================== nerdtree ===================
+map <C-e> <plug>NERDTreeTabsToggle<CR>
+map <leader>e :NERDTreeFind<CR>
+
+let NERDTreeShowBookmarks=1
+let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
+let NERDTreeChDirMode=0
+let NERDTreeQuitOnOpen=1
+let NERDTreeMouseMode=2
+let NERDTreeShowHidden=1
+let NERDTreeKeepTreeInNewTab=1
+let g:nerdtree_tabs_open_on_gui_startup=0
 
 " ==================== sneak.vim ===================
-" map f <Plug>Sneak_s
-" map F <Plug>Sneak_S
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S
+
+" ==================== ctrlsf.vim ===================
+let g:ctrlsf_ackprg = 'rg'
+nmap <C-a> <Plug>CtrlSFPrompt
+vmap <C-a> <Plug>CtrlSFVwordExec
+nnoremap <C-j> :CtrlSFOpen<CR>
+
+" ==================== vim-fugitive ===================
+" set diff views vertical
+set diffopt+=vertical
+
+" ==================== gitv ===================
+nnoremap <silent> <leader>gV :Gitv --all<CR>
+nnoremap <silent> <leader>gv :Gitv! --all<CR>
+
+" TODO
+" neocomplete
+" tmux complete
+"

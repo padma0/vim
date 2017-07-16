@@ -24,7 +24,7 @@ Plug 'tacahiroy/ctrlp-funky'
 " True Sublime Text style multiple selections
 Plug 'terryma/vim-multiple-cursors'
 " extended % matching for HTML, LaTeX, and many other languages
-Plug 'matchit.zip'
+Plug 'tmhedberg/matchit'
 " lean & mean status/tabline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -36,12 +36,12 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'mhinz/vim-signify'
 " a Git wrapper
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired' " ]q => :cnext [q => :cprev
+Plug 'gregsexton/gitv'
 " rainbow parentheses improved
 Plug 'luochen1990/rainbow'
 " snippets...
-Plug 'Shougo/neocomplete.vim.git'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 " Plug 'majutsushi/tagbar'
 " Plug 'godlygeek/tabular'
@@ -53,5 +53,27 @@ Plug 'honza/vim-snippets'
 " Plug 'mattn/webapi-vim'
 " Plug 'mattn/gist-vim'
 " Plug 'tpope/vim-commentary'
+
+" for frontend develop
+Plug 'elzr/vim-json'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'mattn/emmet-vim'
+
+" global search like sublime
+Plug 'dyng/ctrlsf.vim'
+Plug 'justinmk/vim-sneak'
+
+" for document and GTD
+Plug 'vimwiki/vimwiki'
+
+" Plug 'wellle/tmux-complete.vim'
+
+" session
+Plug 'tpope/vim-obsession'
+Plug 'dhruvasagar/vim-prosession'
+
+Plug 'elixir-lang/vim-elixir'
 
 call plug#end()
