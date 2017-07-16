@@ -35,7 +35,7 @@ The leader key is mapped to **space**. To change it, just go to **vimrc-set** fi
 To open, just hit **space+e**, then hit **o** to open a file or directory. For more commands, type '?' while nerdtree is open.
 
 #### Switch between buffers
-Since I usually create lots of buffers, I prefer to use ctrlp to search them, just hit **space+b** to show all opened buffers and search them.
+Since I usually create lots of buffers, I prefer to use ctrlp to search them, just hit **space+b** to show all opened buffers and search them. If you prefer tabline, take [vim-buftabline](https://github.com/ap/vim-buftabline) a try
 
 #### Fuzzy file search
 Use **CTRL+p** and type the name of the file you want.

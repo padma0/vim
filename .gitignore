@@ -1,7 +1,7 @@
 *.swp
 *.swo
-plugged/
 backup/
 swap/
 backup/
+bundle/
 .netrwhist

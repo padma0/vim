@@ -45,5 +45,3 @@ set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 " ==================== Trim whitespaces ======================
 autocmd BufWritePre * %s/\s\+$//e
 
-vnoremap K :m '<-2<CR>gv=gv
-vnoremap J :m '>+1<CR>gv=gv
