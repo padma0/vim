@@ -1,0 +1,52 @@
+
+" ==================== Defaults ================================
+" Visual shifting (does not exit Visual mode)
+vnoremap < <gv
+vnoremap > >gv
+" For when you forget to sudo.. Really Write the file.
+cmap w!! w !sudo tee % >/dev/null
+
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
+
+" paste without overwriting last yank
+vnoremap P "_dp
+vnoremap p "_dP
+
+" cd current directory
+nnoremap <leader>cd :cd %:p:h<CR>
+
+" search for visually selected text
+vnoremap // "ay/<C-R>a<CR>
+
+" ==================== Buffers ================================
+noremap <S-l> :bn<CR>
+noremap <S-h> :bp<CR>
+" set :bd to :bw if you want to totally destroy current buffer
+nmap <leader>d :bd<CR>
+nmap <leader>D :bufdo bd<CR>
+
+" ==================== Git ================================
+" Find merge conflict markers
+map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
+
+" ==================== Ultisnips ============================
+" let g:UltiSnipsExpandTrigger="<c-j>"
+" let g:UltiSnipsJumpForwardTrigger="<c-j>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" let g:UltiSnipsEditSplit="vertical"
+
+" ==================== Rainbow Parentheses ===================
+noremap <F7> :RainbowParenthesesToggle <CR>
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" ==================== crtlp ===================
+nnoremap <leader>p :CtrlP<CR>
+nnoremap <leader>r :CtrlPMRU<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
+
+" ==================== sneak.vim ===================
+" map f <Plug>Sneak_s
+" map F <Plug>Sneak_S

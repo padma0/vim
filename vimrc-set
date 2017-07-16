@@ -1,0 +1,49 @@
+" ==================== Defaults ==============================
+let mapleader=" "
+nnoremap <Space> <nop>
+
+syntax on
+set hidden
+set history=1000
+filetype plugin indent on
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set synmaxcol=512
+set backspace=2
+set nu
+set nofoldenable
+set backupcopy=yes
+set clipboard=unnamed
+
+" ===================== Vim UI ==============================
+set cursorline                  " Highlight current line
+set tabpagemax=15               " Only show 15 tabs
+set showmode                    " Display the current mode
+set cursorline                  " Highlight current line
+highlight clear SignColumn      " SignColumn should match background
+highlight clear LineNr          " Current line number row will have same background color in relative mode
+set number                      " Line numbers on
+set showmatch                   " Show matching brackets/parenthesis
+set incsearch                   " Find as you type search
+set hlsearch                    " Highlight search terms
+
+" ==================== Swap files ============================
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+
+" ==================== Vim status line ========================
+set laststatus=2
+set statusline=%<%f\                     " Filename
+set statusline+=%w%h%m%r                 " Options
+set statusline+=%{fugitive#statusline()} " Git Hotness
+set statusline+=\ [%{&ff}/%Y]            " Filetype
+set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+
+" ==================== Trim whitespaces ======================
+autocmd BufWritePre * %s/\s\+$//e
+
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
