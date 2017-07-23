@@ -72,3 +72,13 @@ let g:user_emmet_settings = {
 \     'extends' : 'jsx',
 \   },
 \}
+
+" ==================== multiple_cursor & neocomplete ======================
+function! Multiple_cursors_before()
+  :NeoCompleteToggle
+endfunction
+
+function! Multiple_cursors_after()
+  :NeoCompleteToggle
+endfunction
+

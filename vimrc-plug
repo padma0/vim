@@ -68,12 +68,18 @@ Plug 'justinmk/vim-sneak'
 " for document and GTD
 Plug 'vimwiki/vimwiki'
 
-" Plug 'wellle/tmux-complete.vim'
+" auto complete
+Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'wellle/tmux-complete.vim'
+Plug 'honza/vim-snippets'
 
 " session
 Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
 
+" elixir
 Plug 'elixir-lang/vim-elixir'
 
 call plug#end()
