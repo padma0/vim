@@ -25,8 +25,8 @@ nnoremap Y y$
 noremap <S-l> :bn<CR>
 noremap <S-h> :bp<CR>
 " set :bd to :bw if you want to totally destroy current buffer
-nmap <leader>d :bd<CR>
-nmap <leader>D :bufdo bd<CR>
+nmap <C-b> :bw<CR>
+nmap <S-b> :bufdo bw<CR>
 
 " ==================== Git ================================
 " Find merge conflict markers
