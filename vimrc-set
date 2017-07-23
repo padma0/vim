@@ -96,6 +96,11 @@ function! Multiple_cursors_after()
   endif
 endfunction
 
+
+" ==================== ale ======================
+let g:ale_sign_column_always = 1
+let g:airline#extensions#ale#enabled = 1
+
 " ==================== init backup & views ======================
 " Initialize directories {
 function! InitializeDirectories()

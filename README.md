@@ -33,3 +33,6 @@ Use **CTRL+p** or **space+p** and type the name of the file you want. For recent
 
 #### Searching
 Search file content is provided by CtrlSF plugin. To do a quick file search, just type **Ctrl-a**
+
+#### Lint Engine
+I used to use [syntastic](https://github.com/scrooloose/syntastic) before, but i switch to [ale](https://github.com/w0rp/ale) because of asynchronous after vim8 coming out.

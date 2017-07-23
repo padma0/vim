@@ -82,4 +82,7 @@ Plug 'dhruvasagar/vim-prosession'
 " elixir
 Plug 'elixir-lang/vim-elixir'
 
+"Asynchronous Lint Engine
+Plug 'w0rp/ale'
+
 call plug#end()
