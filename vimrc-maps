@@ -15,6 +15,8 @@ vnoremap p "_dP
 
 " cd current directory
 nnoremap <leader>cd :cd %:p:h<CR>
+" copy current file and line to clipboard
+nnoremap <leader>cf :let @*=join([expand("%:p"), line(".")], ' #L')<CR>
 
 " search for visually selected text
 vnoremap // "ay/<C-R>a<CR>
@@ -31,6 +33,19 @@ nmap <S-b> :bufdo bw<CR>
 " ==================== Git ================================
 " Find merge conflict markers
 map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
+
+" ==================== Fugitive ===================
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gb :Gblame<CR>
+nnoremap <silent> <leader>gl :Glog<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
+nnoremap <silent> <leader>gr :Gread<CR>
+nnoremap <silent> <leader>gw :Gwrite<CR>
+nnoremap <silent> <leader>ge :Gedit<CR>
+nnoremap <silent> <leader>gi :Git add -p %<CR>
+nnoremap <silent> <leader>gg :SignifyToggle<CR>
 
 " ==================== Ultisnips ============================
 " let g:UltiSnipsExpandTrigger="<c-j>"
@@ -257,16 +272,3 @@ if !exists('no_omni_complete')
     au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
     set completeopt=menu,preview,longest
 endif
-
-" ==================== Fugitive ===================
-nnoremap <silent> <leader>gs :Gstatus<CR>
-nnoremap <silent> <leader>gd :Gdiff<CR>
-nnoremap <silent> <leader>gc :Gcommit<CR>
-nnoremap <silent> <leader>gb :Gblame<CR>
-nnoremap <silent> <leader>gl :Glog<CR>
-nnoremap <silent> <leader>gp :Git push<CR>
-nnoremap <silent> <leader>gr :Gread<CR>
-nnoremap <silent> <leader>gw :Gwrite<CR>
-nnoremap <silent> <leader>ge :Gedit<CR>
-nnoremap <silent> <leader>gi :Git add -p %<CR>
-nnoremap <silent> <leader>gg :SignifyToggle<CR>
