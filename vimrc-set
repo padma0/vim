@@ -74,11 +74,17 @@ let g:user_emmet_settings = {
 \}
 
 " ==================== multiple_cursor & neocomplete ======================
+" default maps Ctrl-n, Ctrl-p, Ctrl-x, and <Esc>
+" Called once right before you start selecting multiple cursors
 function! Multiple_cursors_before()
-  :NeoCompleteToggle
+  if exists(':NeoCompleteLock')==2
+    exe 'NeoCompleteLock'
+  endif
 endfunction
 
+" Called once only when the multiple selection is canceled (default <Esc>)
 function! Multiple_cursors_after()
-  :NeoCompleteToggle
+  if exists(':NeoCompleteUnlock')==2
+    exe 'NeoCompleteUnlock'
+  endif
 endfunction
-
