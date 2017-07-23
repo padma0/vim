@@ -3,6 +3,8 @@
 backup/
 swap/
 backup/
+undo/
+views/
 bundle/
 session/
 .netrwhist
