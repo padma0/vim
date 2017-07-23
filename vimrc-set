@@ -102,12 +102,10 @@ function! InitializeDirectories()
     let parent = $HOME
     let dir_list = {
                 \ 'backup': 'backupdir',
-                \ 'views': 'viewdir',
+                \ 'undo': 'undodir',
                 \ 'swap': 'directory' }
-
-    if has('persistent_undo')
-        let dir_list['undo'] = 'undodir'
-    endif
+    " add views if you need it
+    " \ 'views': 'viewdir',
 
     " Specify a directory in which to place the vimbackup,
     " vimviews, vimundo, and vimswap files/directories
@@ -130,3 +128,4 @@ function! InitializeDirectories()
     endfor
 endfunction
 call InitializeDirectories()
+" test undo!
