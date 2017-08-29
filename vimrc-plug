@@ -43,6 +43,10 @@ Plug 'luochen1990/rainbow'
 " snippets...
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+" ES2015 code snippets (Optional)
+Plug 'epilande/vim-es2015-snippets'
+" React code snippets
+Plug 'epilande/vim-react-snippets'
 " Plug 'majutsushi/tagbar'
 " Plug 'godlygeek/tabular'
 " Plug 'flazz/vim-colorschemes'

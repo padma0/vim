@@ -2,12 +2,21 @@
 
 ### Usage
 
+#### 0. requirement
+- vim 8 with lua
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [reattach-to-user-namespace](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard)
+```sh
+brew install vim --with-override-system-vi --with-lua
+brew install ripgrep
+brew install reattach-to-user-namespace
+```
 #### 1. clone this repo
 ```sh
 git clone https://github.com/padma0/vim.git ~/.vim
+vim +PlugInstall +qall
 ```
-Open vim and then run `:PlugInstall`.
-#### 2. make a symbolic link to vimrc
+#### 2. make a symbolic link to vimrc (optional)
 ```sh
 ln -s .vim/vimrc .vimrc
 ```
