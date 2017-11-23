@@ -10,8 +10,9 @@ vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
 
 " paste without overwriting last yank
-vnoremap P "_dp
-vnoremap p "_dP
+" vnoremap P "_dp
+" vnoremap p "_dP
+vnoremap p :<C-U>let @p = @+<CR>gvp:let @+ = @p<CR>
 
 " cd current directory
 nnoremap <leader>cd :cd %:p:h<CR>
