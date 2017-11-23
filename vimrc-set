@@ -27,6 +27,11 @@ if has('persistent_undo')
   set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
 endif
 
+set ignorecase
+set smartcase
+
+set mouse=a
+
 " ===================== Vim UI ==============================
 set cursorline                  " Highlight current line
 set tabpagemax=15               " Only show 15 tabs
