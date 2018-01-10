@@ -3,11 +3,11 @@
 ### Usage
 
 #### 0. requirement
-- vim 8 with lua
+- vim 8 with python3
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [reattach-to-user-namespace](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard)
 ```sh
-brew install vim --with-override-system-vi --with-lua
+brew install vim --with-override-system-vi --with-python3 --without-ruby
 brew install ripgrep
 brew install reattach-to-user-namespace
 ```
