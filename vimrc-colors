@@ -1,6 +1,21 @@
-" colorscheme monokai
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-let g:solarized_contrast="normal"
-let g:solarized_visibility="normal"
-color solarized             " Load a colorscheme
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+if has('nvim')
+  syntax enable
+  let g:oceanic_next_terminal_bold = 1
+  let g:oceanic_next_terminal_italic = 1
+  let g:airline_theme='oceanicnext'
+  colorscheme OceanicNext
+else
+  syntax on
+  " colorscheme monokai
+  let g:solarized_termcolors=256
+  let g:solarized_termtrans=1
+  let g:solarized_contrast="normal"
+  let g:solarized_visibility="normal"
+  color solarized             " Load a colorscheme
+endif
+
+

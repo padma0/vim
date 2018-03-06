@@ -9,8 +9,13 @@ Plug 'scrooloose/nerdtree'
 " NERDTree and tabs together
 Plug 'jistr/vim-nerdtree-tabs'
 " colorscheme
-Plug 'crusoexia/vim-monokai'
-Plug 'altercation/vim-colors-solarized'
+if has('nvim')
+  Plug 'mhartington/oceanic-next'
+else
+  " Plug 'crusoexia/vim-monokai'
+  Plug 'altercation/vim-colors-solarized'
+endif
+
 " quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
 " Weapon to fight against conflicts
@@ -66,10 +71,13 @@ Plug 'justinmk/vim-sneak'
 Plug 'vimwiki/vimwiki'
 
 " auto complete
-" Plug 'Shougo/neocomplete.vim'
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 Plug 'wellle/tmux-complete.vim'
 
 " snippets

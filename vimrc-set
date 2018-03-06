@@ -3,7 +3,6 @@
 " nnoremap <Space> <nop>
 let mapleader=","
 
-syntax on
 set hidden
 set history=1000
 filetype plugin indent on
