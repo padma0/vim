@@ -95,4 +95,7 @@ Plug 'w0rp/ale'
 " vue
 Plug 'posva/vim-vue'
 
+" go
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+
 call plug#end()
