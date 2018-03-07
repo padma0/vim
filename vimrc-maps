@@ -120,5 +120,9 @@ set diffopt+=vertical
 nnoremap <silent> <leader>gV :Gitv --all<CR>
 nnoremap <silent> <leader>gv :Gitv! --all<CR>
 
+" ==================== open/reload vimrc ===================
+nnoremap <leader>ve :e $MYVIMRC<CR>
+nnoremap <leader>vs :so $MYVIMRC<CR>
+
 " 自动匹配html标签
 " imap </ </<C-X><C-O>
