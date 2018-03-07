@@ -9,12 +9,9 @@ Plug 'scrooloose/nerdtree'
 " NERDTree and tabs together
 Plug 'jistr/vim-nerdtree-tabs'
 " colorscheme
-if has('nvim')
-  Plug 'mhartington/oceanic-next'
-else
-  " Plug 'crusoexia/vim-monokai'
-  Plug 'altercation/vim-colors-solarized'
-endif
+Plug 'mhartington/oceanic-next'
+" Plug 'crusoexia/vim-monokai'
+Plug 'altercation/vim-colors-solarized'
 
 " quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
@@ -45,16 +42,6 @@ Plug 'tpope/vim-unimpaired' " ]q => :cnext [q => :cprev
 Plug 'gregsexton/gitv'
 " rainbow parentheses improved
 Plug 'luochen1990/rainbow'
-" Plug 'majutsushi/tagbar'
-" Plug 'godlygeek/tabular'
-" Plug 'flazz/vim-colorschemes'
-" Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'Yggdroot/indentLine'
-" Plug 'vim-scripts/restore_view.vim'
-" Plug 'tpope/vim-abolish.git'
-" Plug 'mattn/webapi-vim'
-" Plug 'mattn/gist-vim'
-" Plug 'tpope/vim-commentary'
 
 " for frontend develop
 Plug 'elzr/vim-json'
@@ -105,5 +92,8 @@ Plug 'posva/vim-vue'
 
 " go
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+if has('nvim')
+  Plug 'sebdah/vim-delve'
+endif
 
 call plug#end()
