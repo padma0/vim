@@ -1,5 +1,12 @@
 ## My Vim Configs
 
+### First of all
+At first, I'm a big fan of Vim8. However, after meeting lots of great plugins from neovim, I decided to take a try. Switch to neovim is quite easy, by the following steps(on mac):
+1. `brew install neovim`
+2. `ln -s ~/.vim ~/.config/nvim`
+3. `ln -s ~/.vimrc ~/.config/nvim/init.vim`
+That's it. Enjoy yourselves! I will keep playing with it and share my experience here.
+
 ### Usage
 
 #### 0. requirement
