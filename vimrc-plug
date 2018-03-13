@@ -94,6 +94,7 @@ Plug 'posva/vim-vue'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 if has('nvim')
   Plug 'sebdah/vim-delve'
+  Plug 'zchee/deoplete-go', { 'do': 'make' }
 endif
 
 call plug#end()
