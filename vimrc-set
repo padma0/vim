@@ -73,9 +73,56 @@ command! -bang Q q<bang>
 command! -bang QA qa<bang>
 command! -bang Qa qa<bang>
 
+" ==================== nerdtree ===================
+let NERDTreeShowBookmarks=1
+let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
+let NERDTreeChDirMode=0
+let NERDTreeQuitOnOpen=1
+let NERDTreeMouseMode=2
+let NERDTreeShowHidden=1
+let NERDTreeKeepTreeInNewTab=1
+let g:nerdtree_tabs_open_on_gui_startup=0
+
+" ==================== ctrlsf.vim ===================
+let g:ctrlsf_ackprg = 'rg'
+
+" ==================== crtlp ===================
+let g:ctrlp_working_path_mode = 'ra'
+
+if executable('rg')
+  set grepprg=rg\ --color=never
+  let s:ctrlp_fallback = 'rg %s --files --color=never --glob ""'
+  let g:ctrlp_use_caching = 0
+elseif executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  let s:ctrlp_fallback = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
+else
+  let s:ctrlp_fallback = 'find %s -type f'
+endif
+
+let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+      \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
+if exists("g:ctrlp_user_command")
+  unlet g:ctrlp_user_command
+endif
+
+let g:ctrlp_user_command = {
+      \ 'types': {
+      \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
+      \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+      \ },
+      \ 'fallback': s:ctrlp_fallback
+      \ }
+
 " ==================== nerdcommenter ======================
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
+
+" ==================== vim-fugitive ===================
+" set diff views vertical
+set diffopt+=vertical
 
 " ==================== emmet-vim ======================
 let g:user_emmet_settings = {
@@ -86,8 +133,6 @@ let g:user_emmet_settings = {
 
 " ==================== deoplete ======================
 let g:deoplete#enable_at_startup = 1
-let g:neosnippet#enable_completed_snippet = 1
-let g:deoplete#enable_yarp = 1
 
 " ==================== OmniComplete ===================
 " To disable omni complete, add the following to the top of this file:
@@ -117,6 +162,7 @@ if !exists('no_omni_complete')
     au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
     set completeopt=menu,preview,longest
 endif
+" let g:deoplete#enable_yarp = 1
 
 " ==================== multiple_cursor & neocomplete ======================
 " default maps Ctrl-n, Ctrl-p, Ctrl-x, and <Esc>
@@ -131,6 +177,7 @@ function! Multiple_cursors_after()
 endfunction
 
 " ==================== neosnippet ===================
+let g:neosnippet#enable_completed_snippet = 1
 " Use honza's snippets.
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
@@ -156,7 +203,6 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_lint_on_text_changed = 'never'
 " stop linters to run on opening a file
 let g:ale_lint_on_enter = 0
-nmap <silent> <C-h> <Plug>(ale_previous_wrap)
 
 " ==================== vim-vue ======================
 let g:vue_disable_pre_processors=1
@@ -175,30 +221,23 @@ let g:go_snippet_case_type = 'camelcase'
 
 augroup go
   autocmd!
-
   " Show by default 4 spaces for a tab
   autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 
   " :GoBuild
   autocmd FileType go nmap <leader>b <Plug>(go-build)
-
   " :GoRun
   autocmd FileType go nmap <leader>r <Plug>(go-run)
-
   " :GoDoc
   autocmd FileType go nmap <Leader>d <Plug>(go-doc)
-
   " :GoInfo
   autocmd FileType go nmap <Leader>i <Plug>(go-info)
-
   " :GoMetaLinter
   autocmd FileType go nmap <Leader>l <Plug>(go-metalinter)
-
   " :GoDef but opens in a vertical split
   autocmd FileType go nmap <Leader>v <Plug>(go-def-vertical)
   " :GoDef but opens in a horizontal split
   autocmd FileType go nmap <Leader>s <Plug>(go-def-split)
-
   " :GoAlternate  commands :A, :AV, :AS and :AT
   autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
   autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
