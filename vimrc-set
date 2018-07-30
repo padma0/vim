@@ -85,6 +85,10 @@ let g:nerdtree_tabs_open_on_gui_startup=0
 
 " ==================== ctrlsf.vim ===================
 let g:ctrlsf_ackprg = 'rg'
+let g:ctrlsf_auto_focus = {
+    \ "at": "done",
+    \ "duration_less_than": 1000
+    \ }
 
 " ==================== crtlp ===================
 let g:ctrlp_working_path_mode = 'ra'

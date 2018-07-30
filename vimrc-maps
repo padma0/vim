@@ -69,7 +69,7 @@ map F <Plug>Sneak_S
 
 " ==================== ctrlsf.vim ===================
 nmap <C-a> <Plug>CtrlSFPrompt
-vmap <C-a> "by<Plug>CtrlSFPrompt<C-R>b<CR>
+vmap <C-a> "by<Plug>CtrlSFPrompt'<C-R>b'<CR>
 " vmap <C-a> <Plug>CtrlSFVwordExec
 nnoremap <C-j> :CtrlSFOpen<CR>
 
