@@ -46,18 +46,24 @@ set wildmenu                    " Show list instead of just completing
 set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
 set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
 
+if has('nvim')
+  " fix nvim terminal mode missing cursor
+  hi! link TermCursor Cursor
+  hi TermCursorNC ctermfg=235 ctermbg=242 guifg=#002b36 guibg=#586e75 guisp=NONE cterm=NONE gui=NONE
+endif
+
 " ==================== Swap files ============================
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
 " ==================== Vim status line ========================
-set laststatus=2
-set statusline=%<%f\                     " Filename
-set statusline+=%w%h%m%r                 " Options
-set statusline+=%{fugitive#statusline()} " Git Hotness
-set statusline+=\ [%{&ff}/%Y]            " Filetype
-set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+" set laststatus=2
+" set statusline=%<%f\                     " Filename
+" set statusline+=%w%h%m%r                 " Options
+" set statusline+=%{fugitive#statusline()} " Git Hotness
+" set statusline+=\ [%{&ff}/%Y]            " Filetype
+" set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 
 " ==================== Trim whitespaces ======================
 autocmd BufWritePre * %s/\s\+$//e

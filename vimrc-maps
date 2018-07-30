@@ -84,3 +84,9 @@ nnoremap <silent> <leader>gv :Gitv! --all<CR>
 
 " ==================== ale ======================
 nmap <silent> <C-h> <Plug>(ale_previous_wrap)
+
+" ==================== neovim/terminal =====================
+if has('nvim')
+  tnoremap <Esc> <C-\><C-n>
+  tnoremap <C-\><C-n> <Esc>
+endif

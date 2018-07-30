@@ -31,7 +31,7 @@ Plug 'tmhedberg/matchit'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " show the list of buffers in the command bar
-Plug 'bling/vim-bufferline'
+" Plug 'bling/vim-bufferline'
 " intensely orgasmic commenting
 Plug 'scrooloose/nerdcommenter'
 " Show a diff using Vim its sign column
