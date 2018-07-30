@@ -48,11 +48,10 @@ nnoremap <silent> <leader>ge :Gedit<CR>
 nnoremap <silent> <leader>gi :Git add -p %<CR>
 nnoremap <silent> <leader>gg :SignifyToggle<CR>
 
-" ==================== Ultisnips ============================
-" let g:UltiSnipsExpandTrigger="<c-j>"
-" let g:UltiSnipsJumpForwardTrigger="<c-j>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-" let g:UltiSnipsEditSplit="vertical"
+" ==================== neosnippet.vim ============================
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
 
 " ==================== crtlp ===================
 nnoremap <space>p :CtrlP<CR>
