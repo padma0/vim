@@ -102,6 +102,7 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
+Plug 'vim-scripts/BufOnly.vim'
 
 " 小程序
 Plug 'chemzqm/wxapp.vim'
