@@ -39,7 +39,8 @@ Plug 'mhinz/vim-signify'
 " a Git wrapper
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired' " ]q => :cnext [q => :cprev
-Plug 'gregsexton/gitv'
+" Plug 'gregsexton/gitv'
+Plug 'junegunn/gv.vim'
 " rainbow parentheses improved
 Plug 'luochen1990/rainbow'
 

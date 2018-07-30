@@ -72,9 +72,9 @@ vmap <C-a> "by<Plug>CtrlSFPrompt'<C-R>b'<CR>
 " vmap <C-a> <Plug>CtrlSFVwordExec
 nnoremap <C-j> :CtrlSFOpen<CR>
 
-" ==================== gitv ===================
-nnoremap <silent> <leader>gV :Gitv --all<CR>
-nnoremap <silent> <leader>gv :Gitv! --all<CR>
+" ==================== gv.vim ===================
+nnoremap <silent> <leader>gV :GV<CR>
+nnoremap <silent> <leader>gv :GV!<CR>
 
 " ==================== open/reload vimrc ===================
 " nnoremap <leader>ve :e $MYVIMRC<CR>
