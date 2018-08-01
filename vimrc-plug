@@ -54,6 +54,8 @@ Plug 'mattn/emmet-vim'
 " global search like sublime
 Plug 'dyng/ctrlsf.vim'
 Plug 'justinmk/vim-sneak'
+" Automatically clears search highlight when cursor is moved!
+Plug 'junegunn/vim-slash'
 
 " for document and GTD
 Plug 'vimwiki/vimwiki'
