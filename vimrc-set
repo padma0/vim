@@ -221,11 +221,11 @@ let g:ale_sign_column_always = 1
 let g:airline#extensions#ale#enabled = 1
 let g:ale_lint_on_text_changed = 'never'
 " stop linters to run on opening a file
-let g:ale_lint_on_enter = 0
-
+" let g:ale_lint_on_enter = 0
 " ==================== vim-vue ======================
 autocmd FileType vue syntax sync fromstart
 set suffixesadd+=.vue "gf自动跳转.vue后缀文件
+let g:vue_disable_pre_processors=1
 
 " ==================== vim-go ======================
 let g:go_autodetect_gopath = 1
@@ -254,12 +254,16 @@ augroup go
   autocmd FileType go nmap <space>gi <Plug>(go-info)
 augroup END
 
+augroup wxs
+  au BufRead,BufNewFile *.wxs setlocal filetype=javascript
+augroup END
+
 " ==================== vim-jsx ======================
 let g:jsx_ext_required = 0
 
 " ==================== js-prettier ======================
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue Prettier
 " max line length that prettier will wrap on
 " Prettier default: 80
 let g:prettier#config#print_width = 120

@@ -58,7 +58,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'junegunn/vim-slash'
 
 " for document and GTD
-Plug 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki', { 'branch': 'master' }
 
 " auto complete
 if has('nvim')
@@ -103,11 +103,17 @@ endif
 " prettier
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'vue'] }
 
 Plug 'vim-scripts/BufOnly.vim'
 
 " 小程序
 Plug 'chemzqm/wxapp.vim'
+
+" 快速选择区域内的字符
+Plug 'terryma/vim-expand-region'
+
+" styled-components
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 call plug#end()
