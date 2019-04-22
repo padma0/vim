@@ -70,7 +70,7 @@ autocmd BufWritePre * %s/\s\+$//e
 
 " ==================== stupid shift key fixes ======================
 command! -bang -nargs=* -complete=file E e<bang> <args>
-command! -bang -nargs=* -complete=file W w<bang> <args>
+command! -bang -nargs=* -complete=file W noautocmd w<bang> <args> <bar>e " 保存不触发beautify，并且reload一次file
 command! -bang -nargs=* -complete=file Wq wq<bang> <args>
 command! -bang -nargs=* -complete=file WQ wq<bang> <args>
 command! -bang Wa wa<bang>
