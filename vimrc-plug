@@ -116,4 +116,6 @@ Plug 'terryma/vim-expand-region'
 " styled-components
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
+Plug 'henrik/vim-indexed-search'
+
 call plug#end()

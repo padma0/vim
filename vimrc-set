@@ -316,7 +316,7 @@ let g:prettier#config#trailing_comma = 'all'
 
 " flow|babylon|typescript|css|less|scss|json|graphql|markdown
 " Prettier default: babylon
-let g:prettier#config#parser = 'babylon'
+" let g:prettier#config#parser = 'babylon'
 
 " cli-override|file-override|prefer-file
 let g:prettier#config#config_precedence = 'prefer-file'
@@ -335,6 +335,10 @@ let g:vimwiki_CJK_length = 1
 let g:vimwiki_listsyms = '✗.○●✓'
 " 可以导出markdown?"
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+
+" ==================== henrik/vim-indexed-search ====================
+let g:indexed_search_numbered_only = 1
+let g:indexed_search_colors = 0
 
 " ==================== init backup & views ======================
 " Initialize directories {
