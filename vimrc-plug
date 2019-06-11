@@ -55,7 +55,7 @@ Plug 'mattn/emmet-vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'justinmk/vim-sneak'
 " Automatically clears search highlight when cursor is moved!
-Plug 'junegunn/vim-slash'
+" Plug 'junegunn/vim-slash'
 
 " for document and GTD
 Plug 'vimwiki/vimwiki', { 'branch': 'master' }
@@ -110,13 +110,13 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'vue'] }
 
-Plug 'vim-scripts/BufOnly.vim'
+" Plug 'vim-scripts/BufOnly.vim'
 
 " 小程序
-Plug 'chemzqm/wxapp.vim'
+" Plug 'chemzqm/wxapp.vim'
 
 " 快速选择区域内的字符
-Plug 'terryma/vim-expand-region'
+" Plug 'terryma/vim-expand-region'
 
 " styled-components
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
