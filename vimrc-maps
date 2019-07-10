@@ -38,15 +38,15 @@ map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
 " ==================== Fugitive ===================
 nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
-nnoremap <silent> <leader>gc :Gcommit<CR>
+" nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <silent> <leader>gb :Gblame<CR>
 nnoremap <silent> <leader>gl :Glog<CR>
-nnoremap <silent> <leader>gp :Git push<CR>
-nnoremap <silent> <leader>gr :Gread<CR>
-nnoremap <silent> <leader>gw :Gwrite<CR>
-nnoremap <silent> <leader>ge :Gedit<CR>
-nnoremap <silent> <leader>gi :Git add -p %<CR>
-nnoremap <silent> <leader>gg :SignifyToggle<CR>
+" nnoremap <silent> <leader>gp :Git push<CR>
+" nnoremap <silent> <leader>gr :Gread<CR>
+" nnoremap <silent> <leader>gw :Gwrite<CR>
+" nnoremap <silent> <leader>ge :Gedit<CR>
+" nnoremap <silent> <leader>gi :Git add -p %<CR>
+" nnoremap <silent> <leader>gg :SignifyToggle<CR>
 
 " ==================== neosnippet.vim ============================
 " imap <C-k> <Plug>(neosnippet_expand_or_jump)
@@ -76,14 +76,6 @@ nnoremap <C-j> :CtrlSFOpen<CR>
 " ==================== gv.vim ===================
 nnoremap <silent> <leader>gV :GV<CR>
 nnoremap <silent> <leader>gv :GV!<CR>
-
-" ==================== open/reload vimrc ===================
-" nnoremap <leader>ve :e $MYVIMRC<CR>
-" nnoremap <leader>vs :so $MYVIMRC<CR>
-" comment because they're not working well
-
-" ==================== ale ======================
-nmap <silent> <C-h> <Plug>(ale_previous_wrap)
 
 " ==================== neovim/terminal =====================
 if has('nvim')

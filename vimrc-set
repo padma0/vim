@@ -40,9 +40,9 @@ set number                      " Line numbers on
 set showmatch                   " Show matching brackets/parenthesis
 set incsearch                   " Find as you type search
 set hlsearch                    " Highlight search terms
-set wildmenu                    " Show list instead of just completing
-set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
-set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
+" set wildmenu                    " Show list instead of just completing
+" set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
+" set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
 
 if has('nvim')
   " fix nvim terminal mode missing cursor
@@ -138,13 +138,6 @@ let g:NERDSpaceDelims = 1
 " set diff views vertical
 set diffopt+=vertical
 
-" ==================== ale ======================
-let g:ale_sign_column_always = 1
-let g:airline#extensions#ale#enabled = 1
-let g:ale_lint_on_text_changed = 'never'
-" stop linters to run on opening a file
-" let g:ale_lint_on_enter = 0
-
 " ==================== vim-vue ======================
 autocmd FileType vue syntax sync fromstart
 set suffixesadd+=.vue "gf自动跳转.vue后缀文件
@@ -196,55 +189,6 @@ augroup END
 
 " ==================== vim-jsx ======================
 let g:jsx_ext_required = 0
-
-" ==================== js-prettier ======================
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue Prettier
-" max line length that prettier will wrap on
-" Prettier default: 80
-let g:prettier#config#print_width = 120
-
-" number of spaces per indentation level
-" Prettier default: 2
-let g:prettier#config#tab_width = 2
-
-" use tabs over spaces
-" Prettier default: false
-let g:prettier#config#use_tabs = 'false'
-
-" print semicolons
-" Prettier default: true
-let g:prettier#config#semi = 'true'
-
-" single quotes over double quotes
-" Prettier default: false
-let g:prettier#config#single_quote = 'true'
-
-" print spaces between brackets
-" Prettier default: true
-let g:prettier#config#bracket_spacing = 'true'
-
-" put > on the last line instead of new line
-" Prettier default: false
-let g:prettier#config#jsx_bracket_same_line = 'true'
-
-" avoid|always
-" Prettier default: avoid
-let g:prettier#config#arrow_parens = 'avoid'
-
-" none|es5|all
-" Prettier default: none
-let g:prettier#config#trailing_comma = 'all'
-
-" flow|babylon|typescript|css|less|scss|json|graphql|markdown
-" Prettier default: babylon
-" let g:prettier#config#parser = 'babylon'
-
-" cli-override|file-override|prefer-file
-let g:prettier#config#config_precedence = 'prefer-file'
-
-" always|never|preserve
-let g:prettier#config#prose_wrap = 'preserve'
 
 " ==================== vim wiki ======================
 " Toggle checkbox of a list item on/off

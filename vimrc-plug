@@ -19,19 +19,19 @@ Plug 'tpope/vim-surround'
 Plug 'rhysd/conflict-marker.vim'
 " insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
+
 " Fuzzy file, buffer, mru, tag, etc finder
 Plug 'ctrlpvim/ctrlp.vim'
 " function navigator for ctrlp.vim
 Plug 'tacahiroy/ctrlp-funky'
 " True Sublime Text style multiple selections
+"
 Plug 'terryma/vim-multiple-cursors'
 " extended % matching for HTML, LaTeX, and many other languages
 Plug 'tmhedberg/matchit'
 " lean & mean status/tabline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" show the list of buffers in the command bar
-" Plug 'bling/vim-bufferline'
 " intensely orgasmic commenting
 Plug 'scrooloose/nerdcommenter'
 " Show a diff using Vim its sign column
@@ -44,18 +44,18 @@ Plug 'junegunn/gv.vim'
 " rainbow parentheses improved
 Plug 'luochen1990/rainbow'
 
-" for frontend develop
-Plug 'elzr/vim-json'
-Plug 'pangloss/vim-javascript'
+"" === Syntax Highlighting === "
+" ReactJS JSX syntax highlighting
 Plug 'mxw/vim-jsx'
-Plug 'hail2u/vim-css3-syntax'
-" Plug 'mattn/emmet-vim'
+" Syntax highlighting for javascript libraries
+Plug 'othree/javascript-libraries-syntax.vim'
+" Improved syntax highlighting and indentation
+Plug 'othree/yajs.vim'
 
-" global search like sublime
+" search
 Plug 'dyng/ctrlsf.vim'
 Plug 'justinmk/vim-sneak'
-" Automatically clears search highlight when cursor is moved!
-" Plug 'junegunn/vim-slash'
+Plug 'henrik/vim-indexed-search'
 
 " for document and GTD
 Plug 'vimwiki/vimwiki', { 'branch': 'master' }
@@ -66,23 +66,13 @@ Plug 'wellle/tmux-complete.vim'
 
 " snippets
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 " Plug 'Shougo/neosnippet'
 " Plug 'Shougo/neosnippet-snippets'
-Plug 'honza/vim-snippets'
-" ES2015 code snippets (Optional)
-Plug 'epilande/vim-es2015-snippets'
-" React code snippets
-Plug 'epilande/vim-react-snippets'
 
 " session
 Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
-
-" elixir
-" Plug 'elixir-lang/vim-elixir'
-
-"Asynchronous Lint Engine
-Plug 'w0rp/ale'
 
 " vue
 Plug 'posva/vim-vue'
@@ -94,14 +84,8 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 " 大纲式导航, Go 需要 https://github.com/jstemmer/gotags 支持
 " Plug 'majutsushi/tagbar'
 
-" prettier
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'vue'] }
-
 " styled-components
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
-Plug 'henrik/vim-indexed-search'
 
 call plug#end()
