@@ -49,7 +49,7 @@ Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 
 " global search like sublime
 Plug 'dyng/ctrlsf.vim'
@@ -61,19 +61,13 @@ Plug 'justinmk/vim-sneak'
 Plug 'vimwiki/vimwiki', { 'branch': 'master' }
 
 " auto complete
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'wellle/tmux-complete.vim'
 
 " snippets
 Plug 'SirVer/ultisnips'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
+" Plug 'Shougo/neosnippet'
+" Plug 'Shougo/neosnippet-snippets'
 Plug 'honza/vim-snippets'
 " ES2015 code snippets (Optional)
 Plug 'epilande/vim-es2015-snippets'
@@ -85,7 +79,7 @@ Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
 
 " elixir
-Plug 'elixir-lang/vim-elixir'
+" Plug 'elixir-lang/vim-elixir'
 
 "Asynchronous Lint Engine
 Plug 'w0rp/ale'
@@ -98,25 +92,12 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 " 查看当前代码文件中的变量和函数列表的插件，
 " 可以切换和跳转到代码中对应的变量和函数的位置
 " 大纲式导航, Go 需要 https://github.com/jstemmer/gotags 支持
-Plug 'majutsushi/tagbar'
-
-if has('nvim')
-  Plug 'sebdah/vim-delve'
-  Plug 'zchee/deoplete-go', { 'do': 'make' }
-endif
+" Plug 'majutsushi/tagbar'
 
 " prettier
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'vue'] }
-
-" Plug 'vim-scripts/BufOnly.vim'
-
-" 小程序
-" Plug 'chemzqm/wxapp.vim'
-
-" 快速选择区域内的字符
-" Plug 'terryma/vim-expand-region'
 
 " styled-components
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
