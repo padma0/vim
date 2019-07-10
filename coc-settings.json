@@ -1,6 +1,9 @@
 {
-  "suggest.noselect": false,
-  "suggest.maxCompleteItemCount": 10,
+  "suggest.maxCompleteItemCount": 20,
+  "snippets.extends": {
+    "javascriptreact": ["javascript"],
+    "vue": ["javascript"]
+  },
   "eslint.filetypes": ["javascript", "javascriptreact", "vue"],
   "prettier.disableLanguages": [],
   "coc.preferences.formatOnSaveFiletypes": ["javascript", "json", "javascriptreact", "vue"],

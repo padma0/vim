@@ -87,5 +87,4 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 " styled-components
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
-
 call plug#end()
