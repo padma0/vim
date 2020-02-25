@@ -87,4 +87,10 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 " styled-components
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
+" elixir
+Plug 'elixir-editors/vim-elixir'
+
+" dash
+Plug 'rizzatti/dash.vim'
+
 call plug#end()

@@ -1,8 +1,8 @@
 {
   "suggest.maxCompleteItemCount": 20,
   "snippets.extends": {
-    "javascriptreact": ["javascript"],
-    "vue": ["javascript"]
+    "javascriptreact": ["javascript", "javascriptreact"],
+    "vue": ["javascript", "vue"]
   },
   "eslint.filetypes": ["javascript", "javascriptreact", "vue"],
   "prettier.disableLanguages": [],

@@ -172,6 +172,9 @@ let g:go_fmt_command = "goimports" " 自动import packages
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
 
+let g:go_term_enabled = 1
+let g:go_term_mode = "vsplit"
+
 augroup go
   autocmd!
   " Show by default 4 spaces for a tab
@@ -185,10 +188,14 @@ augroup go
   autocmd FileType go nmap <space>gr <Plug>(go-run)
   autocmd FileType go nmap <space>gd <Plug>(go-doc)
   autocmd FileType go nmap <space>gi <Plug>(go-info)
+  autocmd FileType go nmap <space>gt :GoTestFunc<CR>
 augroup END
 
 " ==================== vim-jsx ======================
 let g:jsx_ext_required = 0
+
+" =========== javascript-libraries-syntax ==========
+let g:used_javascript_libs = 'underscore,react,vue'
 
 " ==================== vim wiki ======================
 " Toggle checkbox of a list item on/off
