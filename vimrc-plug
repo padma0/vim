@@ -93,4 +93,7 @@ Plug 'elixir-editors/vim-elixir'
 " dash
 Plug 'rizzatti/dash.vim'
 
+" paste images in md files
+Plug 'ferrine/md-img-paste.vim'
+
 call plug#end()
