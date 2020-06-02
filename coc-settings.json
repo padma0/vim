@@ -1,0 +1,18 @@
+{
+  "suggest.maxCompleteItemCount": 20,
+  "snippets.extends": {
+    "javascriptreact": ["javascript", "javascriptreact"],
+    "vue": ["javascript", "vue"]
+  },
+  "eslint.filetypes": ["javascript", "javascriptreact", "vue"],
+  "prettier.disableLanguages": [],
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "json", "javascriptreact", "vue"],
+  "vetur.experimental.templateInterpolationService": false, // https://github.com/vuejs/vetur/issues/1237#issuecomment-486477549
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
+  }
+}
