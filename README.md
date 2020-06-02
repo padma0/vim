@@ -13,21 +13,18 @@ brew install reattach-to-user-namespace # mainly use for tmux
 brew install python
 pip3 install neovim
 ```
-#### 1. clone this repo
+#### 1. install plugins
 ```sh
 git clone https://github.com/padma0/vim.git ~/.vim
+ln -s ~/.vim ~/.config/nvim
 nvim +PlugInstall +qall
 ```
-#### 2. make a symbolic link
-```sh
-ln -s ~/.vim ~/.config/nvim
-```
-#### 3. install coc extensions
+#### 2. install coc extensions
 ```
 nvim -c 'coc-marketplace coc-eslint coc-post coc-snippets coc-emmet coc-prettier coc-json coc-css coc-tsserver coc-elixir|q'
 ```
 
-#### 4. That's it! Enjoy!
+#### 3. That's it! Enjoy!
 
 ### More details
 
