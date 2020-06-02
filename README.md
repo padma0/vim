@@ -1,33 +1,33 @@
 ## My Vim Configs
 
-### First of all
-At first, I'm a big fan of Vim8. However, after meeting lots of great plugins from neovim, I decided to take a try. Switch to neovim is quite easy, by the following steps(on mac):
-1. `brew install neovim`
-2. `ln -s ~/.vim ~/.config/nvim`
-3. `ln -s ~/.vimrc ~/.config/nvim/init.vim`
-That's it. Enjoy yourselves! I will keep playing with it and share my experience here.
-
 ### Usage
 
 #### 0. requirement
-- vim 8 with python3
+- neovim
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [reattach-to-user-namespace](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard)
 ```sh
-brew install vim --with-override-system-vi --with-python3 --without-ruby
+brew install neovim
 brew install ripgrep
-brew install reattach-to-user-namespace
+brew install reattach-to-user-namespace # mainly use for tmux
+brew install python
+pip3 install neovim
 ```
 #### 1. clone this repo
 ```sh
 git clone https://github.com/padma0/vim.git ~/.vim
-vim +PlugInstall +qall
+nvim +PlugInstall +qall
 ```
-#### 2. make a symbolic link to vimrc (optional)
+#### 2. make a symbolic link
 ```sh
-ln -s .vim/vimrc .vimrc
+ln -s ~/.vim ~/.config/nvim
 ```
-#### 3. That's it! Enjoy!
+#### 3. install coc extensions
+```
+nvim -c 'coc-marketplace coc-eslint coc-post coc-snippets coc-emmet coc-prettier coc-json coc-css coc-tsserver coc-elixir|q'
+```
+
+#### 4. That's it! Enjoy!
 
 ### More details
 
