@@ -23,7 +23,8 @@ nvim +PlugInstall +qall
 ```
 # some coc extensions needs yarn
 brew install yarn
-nvim -c 'coc-marketplace coc-eslint coc-post coc-snippets coc-emmet coc-prettier coc-json coc-css coc-tsserver coc-elixir|q'
+nvim
+:CocInstall coc-marketplace coc-eslint coc-post coc-snippets coc-emmet coc-prettier coc-json coc-css coc-tsserver coc-elixir
 ```
 
 #### 3. That's it! Enjoy!
