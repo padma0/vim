@@ -214,6 +214,10 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 let g:indexed_search_numbered_only = 1
 let g:indexed_search_colors = 0
 
+" ==================== mhinz/vim-mix-format ====================
+let g:mix_format_on_save = 1
+let g:mix_format_silent_errors = 1
+
 " ==================== init backup & views ======================
 " Initialize directories {
 function! InitializeDirectories()
