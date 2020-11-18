@@ -21,6 +21,10 @@ nnoremap <leader>cf :let @*=join([expand("%:p"), line(".")], ' #L')<CR>
 
 " search for visually selected text
 vnoremap // "ay/<C-R>a<CR>
+
+" search function in elixir
+nnoremap <space>f "fyiw/\(def\(p\)\? \)\@<=<C-R>f<CR>
+
 " Yank from the cursor to the end of the line
 nnoremap Y y$
 
