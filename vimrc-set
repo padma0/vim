@@ -61,7 +61,8 @@ autocmd BufWritePre * %s/\s\+$//e
 
 " ==================== stupid shift key fixes ======================
 command! -bang -nargs=* -complete=file E e<bang> <args>
-command! -bang -nargs=* -complete=file W noautocmd w<bang> <args> <bar>e " 保存不触发beautify，并且reload一次file
+command! -bang -nargs=* -complete=file W w<bang> <args>
+" command! -bang -nargs=* -complete=file W noautocmd w<bang> <args> <bar>e " 保存不触发beautify，并且reload一次file
 command! -bang -nargs=* -complete=file Wq wq<bang> <args>
 command! -bang -nargs=* -complete=file WQ wq<bang> <args>
 command! -bang Wa wa<bang>
@@ -83,6 +84,10 @@ let g:clipboard = {
   \ },
   \ 'cache_enabled': 0,
   \ }
+
+" ==================== sneak.vim ===================
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S
 
 " ==================== nerdtree ===================
 let NERDTreeShowBookmarks=1
@@ -107,10 +112,6 @@ let g:ctrlp_working_path_mode = 'ra'
 if executable('rg')
   set grepprg=rg\ --color=never
   let s:ctrlp_fallback = 'rg %s --files --color=never --glob ""'
-  let g:ctrlp_use_caching = 0
-elseif executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
-  let s:ctrlp_fallback = 'ag %s -l --nocolor -g ""'
   let g:ctrlp_use_caching = 0
 else
   let s:ctrlp_fallback = 'find %s -type f'
@@ -140,13 +141,13 @@ let g:NERDSpaceDelims = 1
 set diffopt+=vertical
 
 " ==================== vim-vue ======================
-autocmd FileType vue syntax sync fromstart
-set suffixesadd+=.vue "gf自动跳转.vue后缀文件
-let g:vue_disable_pre_processors=1
+" autocmd FileType vue syntax sync fromstart
+" set suffixesadd+=.vue "gf自动跳转.vue后缀文件
+" let g:vue_disable_pre_processors=1
 
-" -------------------------------------------------------------------------------------------------
+" ------------------------------------------------------------------------------------------
 " coc.nvim default settings
-" -------------------------------------------------------------------------------------------------
+" ------------------------------------------------------------------------------------------
 
 " Better display for messages
 " set cmdheight=2
@@ -193,10 +194,10 @@ augroup go
 augroup END
 
 " ==================== vim-jsx ======================
-let g:jsx_ext_required = 0
+" let g:jsx_ext_required = 0
 
 " =========== javascript-libraries-syntax ==========
-let g:used_javascript_libs = 'underscore,react,vue'
+" let g:used_javascript_libs = 'underscore,react,vue'
 
 " ==================== vim wiki ======================
 " Toggle checkbox of a list item on/off

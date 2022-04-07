@@ -1,1 +1,1 @@
-/Users/zed/.vimrc
+vimrc

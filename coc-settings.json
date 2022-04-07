@@ -4,7 +4,6 @@
     "javascriptreact": ["javascript", "javascriptreact"],
     "vue": ["javascript", "vue"]
   },
-  "eslint.filetypes": ["javascript", "javascriptreact", "vue"],
   "prettier.disableLanguages": [],
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
@@ -12,14 +11,7 @@
     "javascriptreact",
     "vue"
   ],
-  "vetur.experimental.templateInterpolationService": false, // https://github.com/vuejs/vetur/issues/1237#issuecomment-486477549
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
-    }
-  },
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "diagnostic-languageserver.filetypes": {
     "elixir": ["mix_credo", "mix_credo_compile"],
     "eelixir": ["mix_credo", "mix_credo_compile"]

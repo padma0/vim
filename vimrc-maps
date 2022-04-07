@@ -52,23 +52,14 @@ nnoremap <silent> <leader>gl :Glog<CR>
 " nnoremap <silent> <leader>gi :Git add -p %<CR>
 " nnoremap <silent> <leader>gg :SignifyToggle<CR>
 
-" ==================== neosnippet.vim ============================
-" imap <C-k> <Plug>(neosnippet_expand_or_jump)
-" smap <C-k> <Plug>(neosnippet_expand_or_jump)
-" xmap <C-k> <Plug>(neosnippet_expand_target)
+" ==================== nerdtree ===================
+map <C-e> <plug>NERDTreeTabsToggle<CR>
+map <leader>e :NERDTreeFind<CR>
 
 " ==================== crtlp ===================
 nnoremap <space>p :CtrlP<CR>
 nnoremap <space>r :CtrlPMRU<CR>
 nnoremap <space>b :CtrlPBuffer<CR>
-
-" ==================== nerdtree ===================
-map <C-e> <plug>NERDTreeTabsToggle<CR>
-map <leader>e :NERDTreeFind<CR>
-
-" ==================== sneak.vim ===================
-map f <Plug>Sneak_s
-map F <Plug>Sneak_S
 
 " ==================== ctrlsf.vim ===================
 nmap <C-a> <Plug>CtrlSFPrompt
@@ -87,9 +78,9 @@ if has('nvim')
 endif
 
 
-" -------------------------------------------------------------------------------------------------
+" -------------------------------------------------------------------------------------------
 " coc.nvim default settings
-" -------------------------------------------------------------------------------------------------
+" -------------------------------------------------------------------------------------------
 
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -139,9 +130,6 @@ imap <C-k> <Plug>(coc-snippets-expand-jump)
 
 let g:coc_snippet_prev = '<C-j>'
 let g:coc_snippet_next = '<C-k>'
-
-" ============= dash ===========
-vmap <leader>d "py :Dash <C-r>p<CR>
 
 " ============= md-img-paste.vim =============
 autocmd FileType markdown nmap <silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>

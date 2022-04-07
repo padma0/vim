@@ -11,8 +11,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 
 " colorscheme
 Plug 'mhartington/oceanic-next'
-" Plug 'crusoexia/vim-monokai'
-Plug 'altercation/vim-colors-solarized'
+" Plug 'dracula/vim', { 'as': 'dracula' }
 
 " quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
@@ -26,8 +25,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 " function navigator for ctrlp.vim
 Plug 'tacahiroy/ctrlp-funky'
 " True Sublime Text style multiple selections
-"
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " extended % matching for HTML, LaTeX, and many other languages
 Plug 'tmhedberg/matchit'
 " lean & mean status/tabline
@@ -44,14 +42,8 @@ Plug 'tpope/vim-unimpaired' " ]q => :cnext [q => :cprev
 Plug 'junegunn/gv.vim'
 " rainbow parentheses improved
 Plug 'luochen1990/rainbow'
-
-"" === Syntax Highlighting === "
-" ReactJS JSX syntax highlighting
-Plug 'mxw/vim-jsx'
-" Syntax highlighting for javascript libraries
-Plug 'othree/javascript-libraries-syntax.vim'
-" Improved syntax highlighting and indentation
-Plug 'othree/yajs.vim'
+" paste images in md files
+Plug 'ferrine/md-img-paste.vim'
 
 " search
 Plug 'dyng/ctrlsf.vim'
@@ -68,16 +60,12 @@ Plug 'wellle/tmux-complete.vim'
 " snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-" Plug 'Shougo/neosnippet'
-" Plug 'Shougo/neosnippet-snippets'
 
 " session
 Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
 
-" vue
-Plug 'posva/vim-vue'
-
+"" === Backend ===
 " go
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 " 查看当前代码文件中的变量和函数列表的插件，
@@ -85,17 +73,24 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 " 大纲式导航, Go 需要 https://github.com/jstemmer/gotags 支持
 " Plug 'majutsushi/tagbar'
 
-" styled-components
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-
 " elixir
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 
-" dash
-" Plug 'rizzatti/dash.vim'
 
-" paste images in md files
-Plug 'ferrine/md-img-paste.vim'
+"" === Frontend ===
+"" === Syntax Highlighting === "
+" ReactJS JSX syntax highlighting
+" Plug 'mxw/vim-jsx'
+" Syntax highlighting for javascript libraries
+" Plug 'othree/javascript-libraries-syntax.vim'
+" Improved syntax highlighting and indentation
+" Plug 'othree/yajs.vim'
+
+" vue
+" Plug 'posva/vim-vue'
+
+" styled-components
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 call plug#end()
