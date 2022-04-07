@@ -14,8 +14,8 @@ pip3 install neovim
 ```
 #### 1. install plugins
 ```sh
-git clone https://github.com/padma0/vim.git ~/.vim
-ln -s ~/.vim ~/.config/nvim
+git clone https://github.com/padma0/vim.git ~/nvim
+ln -s ~/.config/nvim ~/.vim
 nvim +PlugInstall
 :CocInstall coc-marketplace coc-eslint coc-snippets coc-emmet coc-prettier coc-json coc-css coc-tsserver coc-elixir coc-diagnostic
 ```
