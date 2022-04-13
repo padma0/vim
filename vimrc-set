@@ -71,6 +71,9 @@ command! -bang Q q<bang>
 command! -bang QA qa<bang>
 command! -bang Qa qa<bang>
 
+" ==================== direnv ======================
+au BufRead,BufNewFile {.envrc,_bash*} set filetype=sh
+
 " ==================== clipboard ====================
 let g:clipboard = {
   \ 'name': 'pbcopy',
@@ -145,9 +148,9 @@ set diffopt+=vertical
 " set suffixesadd+=.vue "gf自动跳转.vue后缀文件
 " let g:vue_disable_pre_processors=1
 
-" ------------------------------------------------------------------------------------------
+" ---------------------------------------------------
 " coc.nvim default settings
-" ------------------------------------------------------------------------------------------
+" ---------------------------------------------------
 
 " Better display for messages
 " set cmdheight=2
