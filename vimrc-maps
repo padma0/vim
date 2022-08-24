@@ -19,6 +19,9 @@ nnoremap <leader>cd :cd %:p:h<CR>
 " copy current file and line to clipboard
 nnoremap <leader>cf :let @*=join([expand("%:p"), line(".")], ' #L')<CR>
 
+" source vim config
+nnoremap <Leader>sc :source $MYVIMRC<CR>
+
 " search for visually selected text
 vnoremap // "ay/<C-R>a<CR>
 
