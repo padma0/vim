@@ -77,6 +77,8 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 
+" vim-http
+Plug 'nicwest/vim-http'
 
 "" === Frontend ===
 "" === Syntax Highlighting === "

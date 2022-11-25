@@ -144,3 +144,9 @@ autocmd FileType markdown nmap <silent> <leader>p :call mdip#MarkdownClipboardIm
 let g:mdip_tmpname='' " 设置临时图片名为空可以按时间设置名字
 let g:mdip_prefix = 'file:' " vimwiki 专用，可以回车打开图片
 
+" ============== vim-http ==============
+vnoremap <C-o> :Http<cr>
+
+" ============== prettify json =========
+vnoremap <C-j> :!jq<cr>
+
