@@ -150,3 +150,8 @@ vnoremap <C-o> :Http<cr>
 " ============== prettify json =========
 vnoremap <C-j> :!jq<cr>
 
+" ============== select shortcut ==============
+nnoremap <space>j v^og_
+xnoremap <space>k <Esc>
+noremap <space>l g_
+noremap <space>h ^
