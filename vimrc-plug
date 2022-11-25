@@ -66,12 +66,6 @@ Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
 
 "" === Backend ===
-" go
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-" 查看当前代码文件中的变量和函数列表的插件，
-" 可以切换和跳转到代码中对应的变量和函数的位置
-" 大纲式导航, Go 需要 https://github.com/jstemmer/gotags 支持
-" Plug 'majutsushi/tagbar'
 
 " elixir
 Plug 'elixir-editors/vim-elixir'

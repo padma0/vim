@@ -161,40 +161,9 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
-" ==================== vim-go ======================
-" let g:go_auto_sameids = 1
-let g:go_autodetect_gopath = 1
-let g:go_list_type = "quickfix"
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_generate_tags = 1
-let g:go_snippet_case_type = 'camelcase'
-let g:go_fmt_command = "goimports" " 自动import packages
-" disable vim-go :GoDef short cut (gd)
-" this is handled by LanguageClient [LC]
-let g:go_def_mapping_enabled = 0
-
-let g:go_term_enabled = 1
-let g:go_term_mode = "vsplit"
-
-augroup go
-  autocmd!
-  " Show by default 4 spaces for a tab
-  autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
-  " 为当前cursor的结构实现某接口
-  autocmd Filetype go nmap <space>gl :GoImpl<CR>
-  " 显示当前package所有的类型和方法的声明
-  autocmd Filetype go nmap <space>gf :GoDecls<CR>
-  autocmd Filetype go nmap <space>gF :GoDeclsDir<CR>
-  autocmd FileType go nmap <space>gb <Plug>(go-build)
-  autocmd FileType go nmap <space>gr <Plug>(go-run)
-  autocmd FileType go nmap <space>gd <Plug>(go-doc)
-  autocmd FileType go nmap <space>gi <Plug>(go-info)
-  autocmd FileType go nmap <space>gt :GoTestFunc<CR>
-augroup END
+" ==================== coc-go =======================
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 
 " ==================== vim-jsx ======================
 " let g:jsx_ext_required = 0
