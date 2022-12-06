@@ -4,10 +4,9 @@ call plug#begin('~/.vim/bundle')
 
 " Defaults everyone can agree on
 Plug 'tpope/vim-sensible'
-" A tree explorer plugin for vim
-Plug 'scrooloose/nerdtree'
-" NERDTree and tabs together
-Plug 'jistr/vim-nerdtree-tabs'
+
+" A file explorer tree for neovim written in lua
+Plug 'nvim-tree/nvim-tree.lua'
 
 " colorscheme
 Plug 'mhartington/oceanic-next'
