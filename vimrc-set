@@ -88,10 +88,6 @@ let g:clipboard = {
   \ 'cache_enabled': 0,
   \ }
 
-" ==================== sneak.vim ===================
-map f <Plug>Sneak_s
-map F <Plug>Sneak_S
-
 " ==================== nerdtree ===================
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']

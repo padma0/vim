@@ -82,6 +82,9 @@ if has('nvim')
   tnoremap <C-\><C-n> <Esc>
 endif
 
+" ==================== sneak.vim ===================
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S
 
 " -------------------------------------------------------------------------------------------
 " coc.nvim default settings
