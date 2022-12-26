@@ -1,6 +1,6 @@
-source ~/.vim/vimrc-plug
-source ~/.vim/vimrc-colors
-source ~/.vim/vimrc-set
-source ~/.vim/vimrc-maps
+source ~/.config/nvim/vimrc-plug
+source ~/.config/nvim/vimrc-colors
+source ~/.config/nvim/vimrc-set
+source ~/.config/nvim/vimrc-maps
 
 runtime vim.lua

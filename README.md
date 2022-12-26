@@ -29,7 +29,7 @@ The leader key is mapped to **comma**. To change it, just go to **vimrc-set** fi
 The most powerful [auto-complete plugin](https://github.com/Shougo/neocomplete.vim), compatible with [vim-snippets](https://github.com/honza/vim-snippets).
 There are also completion of words in adjacent tmux panes, provided by [tmux-complete.vim](https://github.com/wellle/tmux-complete.vim).
 
-#### Directory Tree (NERDTree)
+#### Directory Tree
 To open, just hit **Ctrl+e**, then hit **o** to open a file or directory. For more commands, type '?' while nerdtree is open.
 
 #### Switch between buffers

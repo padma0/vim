@@ -88,16 +88,6 @@ let g:clipboard = {
   \ 'cache_enabled': 0,
   \ }
 
-" ==================== nerdtree ===================
-let NERDTreeShowBookmarks=1
-let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
-let NERDTreeChDirMode=0
-let NERDTreeQuitOnOpen=1
-let NERDTreeMouseMode=2
-let NERDTreeShowHidden=1
-let NERDTreeKeepTreeInNewTab=1
-let g:nerdtree_tabs_open_on_gui_startup=0
-
 " ==================== ctrlsf.vim ===================
 let g:ctrlsf_ackprg = 'rg'
 let g:ctrlsf_auto_focus = {
